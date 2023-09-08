@@ -1,0 +1,11 @@
+.outlet, .sidebar {
+    transition: transform 1000ms ease-in-out;
+}
+
+.sidebar-close {
+    transform: translateX(-240px);
+}
+
+.outlet-close {
+    transform: translateX(-240px);
+}

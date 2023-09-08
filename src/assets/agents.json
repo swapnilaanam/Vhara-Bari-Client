@@ -1,0 +1,20 @@
+[
+    {
+        "agent_id": "001",
+        "name": "John Smith",
+        "email": "john.smith@example.com",
+        "phone": "+1 (123) 456-7890",
+        "office_location": "123 Main Street, Cityville, USA",
+        "bio": "John Smith has been helping clients find their dream homes for over a decade. With his extensive knowledge of the local real estate market and dedication to customer satisfaction, he's the go-to agent for all your rental needs.",
+        "image_url": "./images/agent-1.jpg"
+    },
+    {
+        "agent_id": "002",
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "phone": "+1 (987) 654-3210",
+        "office_location": "456 Elm Street, Townsville, USA",
+        "bio": "Jane Doe is a passionate real estate professional who prides herself on finding the perfect rental properties for her clients. With a keen eye for detail and a commitment to personalized service, Jane is here to make your rental experience seamless.",
+        "image_url": "./images/agent-2.jpg"
+    }
+]
