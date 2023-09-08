@@ -40,11 +40,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/checkout/:id',
-                element: <CheckOut />
+                element: <TenantRoute><CheckOut /></TenantRoute>
             },
             {
                 path: '/payment/:id',
-                element: <Payment />
+                element: <TenantRoute><Payment /></TenantRoute>
             },
             {
                 path: '/login',
