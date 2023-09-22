@@ -15,6 +15,20 @@ const OwnerDashboard = () => {
         }
     });
 
+    const { data: totalSum = 0 } = useQuery({
+        queryKey: ['totalSum', user?.email],
+        queryFn: async () => {
+            try {
+                const response = await axiosSecure.get(`/payments/owner/${user?.email}`);
+                const sum = response?.data?.reduce((total, current) => total + current?.price, 0);
+                console.log(sum);
+                // return sum;
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    });
+
     const data = [
         { name: 'Total Houses', value: houses.length },
         { name: 'Approved Houses', value: houses.filter(house => house.status === 'Approved').length, fill: "rgb(34, 197, 94)" },
@@ -38,38 +52,25 @@ const OwnerDashboard = () => {
                         </div>
                         <div>
                             <h4 className="mb-5"><strong className="me-2">Email:</strong> {user?.email}</h4>
-                            <h4><strong className="me-2">Total Rent Collected:</strong> {25000}</h4>
-                        </div>
+                            {(totalSum && totalSum >= 0) && < h4 > <strong className="me-2">Total Rent Collected:</strong> {25000}</h4>}
                     </div>
-                    <div className="mt-10 w-[80%] mx-auto lg:full h-[400px] flex justify-center">
-                        <ResponsiveContainer>
-                            <PieChart width={800} height={400}>
-                                <Pie
-                                    dataKey="value"
-                                    data={data}
-                                    fill="#8884d8"
-                                    label
-                                />
-                                <Legend />
-                            </PieChart>
-                        </ResponsiveContainer>
-                    </div>
-                    {/* <div className="mt-10 w-full h-[400px] flex lg:hidden justify-center">
-                        <ResponsiveContainer>
-                            <PieChart width={20} height={20}>
-                                <Pie
-                                    dataKey="value"
-                                    data={data}
-                                    fill="#8884d8"
-                                    label
-                                />
-                                <Legend />
-                            </PieChart>
-                        </ResponsiveContainer>
-                    </div> */}
+                </div>
+                <div className="mt-10 w-[80%] mx-auto lg:full h-[400px] flex justify-center">
+                    <ResponsiveContainer>
+                        <PieChart width={800} height={400}>
+                            <Pie
+                                dataKey="value"
+                                data={data}
+                                fill="#8884d8"
+                                label
+                            />
+                            <Legend />
+                        </PieChart>
+                    </ResponsiveContainer>
                 </div>
             </div>
         </div>
+        </div >
     );
 };
 

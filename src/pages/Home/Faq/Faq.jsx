@@ -1,10 +1,12 @@
 const Faq = () => {
     return (
-        <div className="bg-gray-100 py-20 px-4 lg:px-0">
-            <h2 className="text-4xl mx-auto font-medium text-center mb-20">People Ask, We Have Answers</h2>
+        <div className="bg-gray-50 py-20 px-4 lg:px-0">
+            <h2 className="text-3xl mx-auto font-medium text-center mb-20 uppercase tracking-wider">People Ask, We Have Answers</h2>
             <div className="space-y-4 max-w-5xl mx-auto">
                 <details
-                    className="group border-s-4 border-green-500 bg-white p-6 [&_summary::-webkit-details-marker]:hidden"
+                    className="group border-s-4 border-green-500 bg-white shadow-xl rounded-sm p-6 [&_summary::-webkit-details-marker]:hidden"
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
                     open
                 >
                     <summary className="flex cursor-pointer items-center justify-between gap-1.5">
@@ -34,7 +36,9 @@ const Faq = () => {
                 </details>
 
                 <details
-                    className="group border-s-4 border-green-500 bg-white p-6 [&_summary::-webkit-details-marker]:hidden"
+                    className="group border-s-4 border-green-500 bg-white shadow-xl rounded-sm p-6 [&_summary::-webkit-details-marker]:hidden"
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
                 >
                     <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                         <h2 className="text-lg font-medium text-gray-900">
@@ -63,7 +67,9 @@ const Faq = () => {
                 </details>
 
                 <details
-                    className="group border-s-4 border-green-500 bg-white p-6 [&_summary::-webkit-details-marker]:hidden"
+                    className="group border-s-4 border-green-500 bg-white shadow-xl rounded-sm p-6 [&_summary::-webkit-details-marker]:hidden"
+                    data-aos="fade-right"
+                    data-aos-duration="2500"
                 >
                     <summary className="flex cursor-pointer items-center justify-between gap-1.5">
                         <h2 className="text-lg font-medium text-gray-900">

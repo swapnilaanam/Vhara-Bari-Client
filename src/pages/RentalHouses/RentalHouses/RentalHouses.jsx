@@ -27,15 +27,15 @@ const RentalHouses = () => {
 
     return (
         <div className="w-full min-h-screen bg-green-50 pt-20 pb-28">
-            <h4 className="text-center text-3xl font-semibold mb-16">All The Rental Houses</h4>
-            <div className="join flex justify-center mt-8 mb-12">
+            <h4 className="text-center text-3xl font-medium uppercase tracking-wider">All The Rental Houses</h4>
+            <div className="join flex justify-center mt-10 mb-20">
                 <div>
                     <div>
-                        <input className="input join-item bg-white text-black w-52 lg:w-72 border-2 border-gray-300" placeholder="Search By City..." defaultValue={city} ref={searchInputRef} />
+                        <input className="input join-item bg-white text-black w-52 lg:w-80 h-10 border-2 border-gray-300" placeholder="Search By City..." defaultValue={city} ref={searchInputRef} />
                     </div>
                 </div>
                 <div className="indicator">
-                    <button onClick={handleSearch} className="btn btn-warning join-item px-8">Search</button>
+                    <button onClick={handleSearch} className="bg-emerald-600 text-white font-medium join-item px-14">Search</button>
                 </div>
             </div>
             <div className="px-4 max-w-7xl mx-auto flex justify-center gap-20">

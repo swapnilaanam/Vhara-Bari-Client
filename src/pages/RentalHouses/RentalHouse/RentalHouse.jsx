@@ -5,27 +5,26 @@ const RentalHouse = ({ rentalHouse }) => {
     const { _id, houseName, ownerName, houseImage, streetAddress, city, rentPrice } = rentalHouse;
 
     return (
-        <div className="card card-compact w-80 lg:w-96 bg-base-100 rounded-md shadow-xl">
-            <figure><img src={houseImage} className="w-full h-[245px] object-cover" alt={houseName} /></figure>
-            <div className="card-body">
+        <div className="relative card card-compact w-80 bg-white rounded-sm shadow-xl shadow-green-300 z-0" data-aos="zoom-out-right" data-aos-duration="2000">
+            <div className="absolute bg-green-400 w-full h-full -z-10 ms-3.5 mt-3.5"></div>
+            <figure><img src={houseImage} className="w-full h-[200px] object-cover rounded-sm" alt={houseName} /></figure>
+            <div className="card-body bg-white rounded-b-sm">
                 <div className="flex justify-between items-start">
-                    <h2 className="card-title text-xl">{houseName}</h2>
+                    <h2 className="card-title text-lg">{houseName}</h2>
                     <h4 className="text-base">
-                        <strong>Rent:</strong> <div className="badge badge-neutral text-white text-base">{rentPrice}</div>
+                        <strong>Rent:</strong> <div className="badge badge-md badge-neutral text-white text-base">{rentPrice}</div>
                         <div className="text-xs text-right">* per month</div>
                     </h4>
                 </div>
-                <div className="space-y-3 text-base">
+                <div className="space-y-3 text-md text-gray-700">
                     <p>By <strong>{ownerName}</strong></p>
                     <p><strong>Location:</strong> {streetAddress}, {city}</p>
                 </div>
                 <div className="card-actions justify-end mt-4">
                     <Link to={`/rentalhouses/${_id}`}>
-                        <button className="btn btn-warning text-black btn-sm">Details</button>
+                        <button className="btn btn-warning text-black btn-sm capitalize">Details</button>
                     </Link>
-                    <Link to={`/checkout/${_id}`}>
-                        <button className="btn btn-success text-black btn-sm">Rent Now</button>
-                    </Link>
+                    <Link to={`/checkout/${_id}`} className="btn bg-emerald-600 text-white btn-sm hover:bg-emerald-700 capitalize">Rent Now</Link>
                 </div>
             </div>
         </div>

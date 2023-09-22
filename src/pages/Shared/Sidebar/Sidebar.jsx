@@ -149,11 +149,11 @@ const Sidebar = () => {
         }
         <div className="divider before:bg-black after:bg-black pt-5"></div>
         <li>
-            <button className="bg-">
+            <button>
                 <ActiveLink to="/">
                     <div className="flex items-center gap-3 pt-5">
                         <FaHome />
-                        <span className="hidden lg:block">Go To Home</span>
+                        <span className="hidden lg:block uppercase">Go To Home</span>
                     </div>
                 </ActiveLink>
             </button>
@@ -161,9 +161,9 @@ const Sidebar = () => {
     </>
 
     return (
-        <nav className="w-full h-full bg-green-200">
+        <nav className="w-full h-full bg-emerald-200">
             <div className="px-4 py-5">
-                <ul className="space-y-4">
+                <ul className="space-y-4 uppercase">
                     {navItems}
                 </ul>
             </div>

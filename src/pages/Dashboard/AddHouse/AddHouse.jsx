@@ -65,8 +65,8 @@ const AddHouse = () => {
 
     return (
         <div className="w-full px-4 lg:px-0">
-            <div className="border-2 border-green-400 max-w-4xl mx-auto my-10 py-10 px-6 lg:px-14 bg-green-500 rounded shadow-lg">
-                <h3 className="text-3xl text-center font-medium mb-7">Add A House</h3>
+            <div className="border-2 border-green-400 max-w-4xl mx-auto my-10 py-10 px-6 lg:px-14 bg-green-400 rounded shadow-lg">
+                <h3 className="text-3xl text-center font-medium mb-7 uppercase tracking-wider">Add A House</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="flex flex-col lg:flex-row gap-5">
                         <div className="form-control w-full mb-2">
@@ -195,7 +195,7 @@ const AddHouse = () => {
                         </div>
                     </div>
                     <div className="form-control w-full mt-8 pb-2">
-                        <input type="submit" value="Add House" className="btn btn-warning" />
+                        <input type="submit" value="Add House" className="btn btn-warning capitalize" />
                     </div>
                 </form>
             </div>

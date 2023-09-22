@@ -85,7 +85,8 @@ const CheckOutForm = ({ rentedHouseInfo, price, selectedHouseId }) => {
                 price: price,
                 data: new Date(),
                 houseId: rentedHouseInfo.houseId,
-                houseName: rentedHouseInfo.houseName
+                houseName: rentedHouseInfo.houseName,
+                ownerEmail: rentedHouseInfo.ownerEmail
             };
 
             axiosSecure.post('/payments', payment)

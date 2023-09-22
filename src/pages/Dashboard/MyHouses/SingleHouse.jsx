@@ -4,7 +4,7 @@ const SingleHouse = ({ index, house, handleDelete, refetch }) => {
     const { _id, houseName, ownerName, houseImage, streetAddress, city, bedroomNumber, livingroomNumber, dineNumber, kitchenNumber, bathroomNumber, floorNumber, rentPrice, status } = house;
 
     return (
-        <div className="card card-compact w-72 lg:w-96 bg-base-100 border-2 shadow-xl rounded-lg">
+        <div className="card card-compact w-72 lg:w-80 bg-base-100 border-2 shadow-xl rounded-lg">
             <img src={houseImage} alt={houseName} className="h-[250px] rounded-t-lg" />
             <div className="w-full card-body">
                 <div className="flex justify-between">
@@ -23,9 +23,9 @@ const SingleHouse = ({ index, house, handleDelete, refetch }) => {
                 <p className="text-base">Floor Number: <strong className="ms-2">{floorNumber}</strong></p>
                 <p className="text-base">Rent: <strong className="ms-2">{rentPrice}</strong>/month</p>
                 <div className="flex justify-end gap-2 my-2">
-                    <label htmlFor={`edit_house_${index}`} className="btn btn-sm btn-warning">Edit</label>
+                    <label htmlFor={`edit_house_${index}`} className="btn btn-sm btn-warning capitalize">Edit</label>
                     <EditHouse index={index} house={house} refetch={refetch}></EditHouse>
-                    <button onClick={() => handleDelete(_id)} className="btn btn-sm bg-red-600 text-white hover:bg-red-700">Delete</button>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-sm bg-red-600 text-white hover:bg-red-700 capitalize">Delete</button>
                 </div>
             </div>
         </div>

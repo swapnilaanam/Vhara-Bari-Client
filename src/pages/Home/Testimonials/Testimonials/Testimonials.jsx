@@ -12,8 +12,8 @@ const Testimonials = () => {
     }, [])
 
     return (
-        <div className="py-28 bg-green-100 px-4 lg:px-0">
-            <h2 className="text-4xl font-medium text-center">Testimonials</h2>
+        <div className="py-28 bg-green-50 px-4 lg:px-0">
+            <h2 className="text-3xl font-medium text-center uppercase tracking-wider">Testimonials</h2>
             <div className="flex flex-col lg:flex-row justify-center items-center gap-20 pt-24">
                 {
                     testimonials.map(testimonial => <Testimonial

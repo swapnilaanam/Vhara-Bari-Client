@@ -18,28 +18,40 @@ const MyHouses = () => {
     });
 
     const handleDelete = (id) => {
-        console.log(id);
-        axiosSecure.delete(`/houses/${id}`)
-            .then(response => {
-                // console.log(response.data);
-                if (response.data.deletedCount > 0) {
-                    refetch();
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'House Has Been Deleted',
-                        showConfirmButton: false,
-                        timer: 1500
+        // console.log(id);
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.delete(`/houses/${id}`)
+                    .then(response => {
+                        // console.log(response.data);
+                        if (response.data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'House Has Been Deleted',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        }
                     })
-                }
-            })
-            .catch(error => console.log(error));
+                    .catch(error => console.log(error));
+            }
+        })
     };
 
     return (
         <div className="py-10 min-h-screen">
-            <h3 className="text-3xl font-medium text-center mb-12">My Houses</h3>
-            <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-8">
+            <h3 className="text-3xl font-medium text-center mb-16 uppercase tracking-wider">My Houses</h3>
+            <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-12">
                 {
                     houses.map((house, index) => <SingleHouse
                         key={house._id}

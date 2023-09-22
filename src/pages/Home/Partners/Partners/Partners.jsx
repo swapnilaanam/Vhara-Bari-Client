@@ -9,8 +9,8 @@ import stripeImg from '../../../../assets/images/stripe.png';
 
 const Partners = () => {
     return (
-        <div className="pt-28 pb-32 bg-green-100">
-            <h2 className="text-center text-4xl font-medium mb-24">Our Partners</h2>
+        <div className="pt-28 pb-32 bg-green-50">
+            <h2 className="text-center text-3xl font-medium mb-24 uppercase tracking-wider">Our Partners</h2>
             <div className="max-w-6xl mx-auto">
                 <Marquee>
                     <div className="w-40 h-32 mx-8">

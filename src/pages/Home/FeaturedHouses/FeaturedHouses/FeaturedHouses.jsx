@@ -16,8 +16,8 @@ const FeaturedHouses = () => {
     }, [])
 
     return (
-        <div className="py-28 bg-gray-100 px-4 lg:px-0">
-            <h2 className="text-4xl font-medium text-center">Featured Houses</h2>
+        <div className="py-28 bg-gray-50 px-4 lg:px-0">
+            <h2 className="text-3xl font-medium text-center uppercase tracking-wider">Featured Houses</h2>
             <div className="flex flex-col lg:flex-row justify-center items-center gap-20 pt-24">
                 {
                     featuredHouses.map(featuredHouse => <FeaturedHouse
@@ -27,11 +27,11 @@ const FeaturedHouses = () => {
                     </FeaturedHouse>)
                 }
             </div>
-            <Link to="/rentalhouses">
-                <div className="text-center">
-                    <button className="mt-16 px-10 text-lg btn btn-md btn-warning">See All Houses</button>
-                </div>
-            </Link>
+            <div className="text-center mt-20">
+                <Link to="/rentalhouses">
+                    <button className="px-20 py-3 text-lg font-medium bg-emerald-600 text-white rounded">See All Houses</button>
+                </Link>
+            </div>
         </div>
     );
 };

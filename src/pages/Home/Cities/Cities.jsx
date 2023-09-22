@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom';
 const Cities = () => {
 
     return (
-        <div className="py-28 bg-gray-100 px-4 lg:px-0">
-            <h2 className="text-4xl font-medium text-center mb-20">Our Journey, Through City</h2>
+        <div className="py-28 bg-gray-50 px-4 lg:px-0">
+            <h2 className="text-3xl font-medium text-center mb-20 uppercase tracking-wider">Our Journey, Through City</h2>
             <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
-                <div className="rounded-lg bg-gray-100 lg:col-span-2">
+                <div className="rounded-lg bg-gray-100 lg:col-span-2" data-aos="fade-up-right" data-aos-duration="1500">
                     <Link to="/rentalhouses?city=Sylhet" className="group relative block shadow-2xl">
                         <div className="relative h-[350px] sm:h-[450px]">
                             <img
@@ -29,15 +29,15 @@ const Cities = () => {
                         </div>
 
                         <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                            <h3 className="text-xl font-medium text-white bg-green-600 p-3">Sylhet</h3>
+                            <h3 className="text-xl font-medium text-white bg-emerald-600 py-3 px-5 rounded-sm">Sylhet</h3>
 
-                            <p className="mt-2 max-w-[40ch] text-base bg-white p-3">
+                            <p className="mt-2 max-w-[40ch] text-base bg-white text-gray-700 p-3">
                                 We Started Our Journey In The Holy City Of Sylhet.
                             </p>
                         </div>
                     </Link>
                 </div>
-                <div className="rounded-lg bg-gray-100">
+                <div className="rounded-lg bg-gray-100" data-aos="fade-up-right" data-aos-duration="1500">
                     <Link to="/rentalhouses?city=Dhaka" className="group relative block shadow-xl">
                         <div className="relative h-[350px] sm:h-[450px]">
                             <img
@@ -54,15 +54,15 @@ const Cities = () => {
                         </div>
 
                         <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                            <h3 className="text-xl font-medium text-white bg-green-600 p-3">Dhaka</h3>
+                            <h3 className="text-xl font-medium text-white bg-emerald-600 py-3 px-5 rounded-sm">Dhaka</h3>
 
-                            <p className="mt-2 max-w-[40ch] text-base bg-white p-3">
+                            <p className="mt-2 max-w-[40ch] text-base bg-white text-gray-700 p-3">
                                 We expanded in the heart of Bangladesh as our second city.
                             </p>
                         </div>
                     </Link>
                 </div>
-                <div className="rounded-lg bg-gray-100">
+                <div className="rounded-lg bg-gray-100" data-aos="fade-up-right" data-aos-duration="1500">
                     <Link to="/rentalhouses?city=Chittagong" className="group relative block shadow-xl">
                         <div className="relative h-[350px] sm:h-[450px]">
                             <img
@@ -79,8 +79,8 @@ const Cities = () => {
                         </div>
 
                         <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
-                            <h3 className="text-xl font-medium text-white bg-green-600 p-3">Chittagong</h3>
-                            <p className="mt-2 max-w-[40ch] text-base bg-white p-3">
+                            <h3 className="text-xl font-medium text-white bg-emerald-600 py-3 px-5 rounded-sm">Chittagong</h3>
+                            <p className="mt-2 max-w-[40ch] text-base bg-white text-gray-700 p-3">
                                 We had the most success in the city of sea and hills.
                             </p>
                         </div>

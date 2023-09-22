@@ -17,24 +17,36 @@ const ManageRentedHouses = () => {
     });
 
     const handleFreeUpHouse = (rentedHouseId, houseId) => {
-        axiosSecure.delete(`http://localhost:5000/rentedhouses/${rentedHouseId}`)
-            .then((response) => {
-                if (response?.data?.deletedCount > 0) {
-                    axiosSecure.patch(`http://localhost:5000/houses/status/${houseId}`, { status: 'Approved' })
-                        .then((response) => {
-                            if (response?.data?.modifiedCount > 0) {
-                                refetch();
-                                Swal.fire({
-                                    position: 'top-end',
-                                    icon: 'success',
-                                    title: 'House Has Been Freed Up!',
-                                    showConfirmButton: false,
-                                    timer: 1500
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Free Up Space!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.delete(`http://localhost:5000/rentedhouses/${rentedHouseId}`)
+                    .then((response) => {
+                        if (response?.data?.deletedCount > 0) {
+                            axiosSecure.patch(`http://localhost:5000/houses/status/${houseId}`, { status: 'Approved' })
+                                .then((response) => {
+                                    if (response?.data?.modifiedCount > 0) {
+                                        refetch();
+                                        Swal.fire({
+                                            position: 'top-end',
+                                            icon: 'success',
+                                            title: 'House Has Been Freed Up!',
+                                            showConfirmButton: false,
+                                            timer: 1500
+                                        })
+                                    }
                                 })
-                            }
-                        })
-                }
-            })
+                        }
+                    })
+            }
+        })
     }
 
     return (
@@ -74,7 +86,7 @@ const ManageRentedHouses = () => {
                                     <td>{rentedHouse.total}</td>
                                     <th>
                                         <div className="flex gap-3">
-                                            <button onClick={() => handleFreeUpHouse(rentedHouse._id, rentedHouse.houseId)} className="btn btn-xs btn-success">
+                                            <button onClick={() => handleFreeUpHouse(rentedHouse._id, rentedHouse.houseId)} className="btn btn-xs md:btn-sm bg-red-600 hover:bg-red-700 text-white">
                                                 Free Up House
                                             </button>
                                         </div>

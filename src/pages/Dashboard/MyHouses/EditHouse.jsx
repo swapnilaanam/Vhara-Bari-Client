@@ -41,8 +41,8 @@ const EditHouse = ({ index, house, refetch }) => {
         <div>
             <input type="checkbox" id={`edit_house_${index}`} className="modal-toggle" />
             <div className="modal">
-                <div className="modal-box max-w-xl bg-green-500">
-                    <h3 className="text-3xl text-center font-medium mb-3">Add A House</h3>
+                <div className="modal-box max-w-xl bg-green-400">
+                    <h3 className="text-2xl text-center font-medium mb-3 uppercase tracking-wider">Edit House</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control w-full mb-1">
                             <label className="label">
@@ -128,11 +128,11 @@ const EditHouse = ({ index, house, refetch }) => {
                             </div>
                         </div>
                         <div className="form-control w-full mt-8 pb-2">
-                            <input type="submit" value="Update House" className="btn btn-warning" />
+                            <input type="submit" value="Update House" className="btn btn-warning capitalize" />
                         </div>
                     </form>
                     <div className="modal-action">
-                        <label htmlFor={`edit_house_${index}`} className="btn btn-sm bg-red-500 hover:bg-red-500 text-white border-0 absolute top-6 right-5">
+                        <label htmlFor={`edit_house_${index}`} className="btn btn-sm bg-red-500 hover:bg-red-500 text-white border-0 absolute top-6 right-5 capitalize">
                             Close
                         </label>
                     </div>
