@@ -38,7 +38,7 @@ const RentalHouses = () => {
                     <button onClick={handleSearch} className="bg-emerald-600 text-white font-medium join-item px-14">Search</button>
                 </div>
             </div>
-            <div className="px-4 max-w-7xl mx-auto flex justify-center gap-20">
+            <div className="px-4 max-w-7xl mx-auto flex justify-center gap-20 flex-wrap">
                 {
                     rentalHouses?.length > 0 ? (
                     rentalHouses.map(rentalHouse => <RentalHouse

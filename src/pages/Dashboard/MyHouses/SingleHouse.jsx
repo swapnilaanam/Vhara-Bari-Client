@@ -11,7 +11,7 @@ const SingleHouse = ({ index, house, handleDelete, refetch }) => {
                     <h2 className="card-title text-xl">{houseName}</h2>
                     <div className="badge badge-neutral text-white text-sm mt-0.5 px-4 py-3">{status}</div>
                 </div>
-                <p className="text-base">Rented By <strong>{ownerName}</strong></p>
+                <p className="text-base">Owned By <strong>{ownerName}</strong></p>
                 <div className="mt-1 flex flex-wrap justify-start items-center gap-2">
                     <div className="badge badge-neutral text-white">{bedroomNumber} Bedroom</div>
                     <div className="badge badge-neutral text-white">{dineNumber} Dine</div>

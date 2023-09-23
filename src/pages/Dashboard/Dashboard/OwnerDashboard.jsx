@@ -52,24 +52,29 @@ const OwnerDashboard = () => {
                         </div>
                         <div>
                             <h4 className="mb-5"><strong className="me-2">Email:</strong> {user?.email}</h4>
-                            {(totalSum && totalSum >= 0) && < h4 > <strong className="me-2">Total Rent Collected:</strong> {25000}</h4>}
+                            {
+                                (totalSum && totalSum >= 0) ? <h4>
+                                    <strong className="me-2">Total Rent Collected:</strong>
+                                    {totalSum}
+                                </h4> : <h4> <strong className="me-2">Total Rent Collected:</strong> 0</h4>
+                            }
+                        </div>
+                    </div>
+                    <div className="mt-10 w-[80%] mx-auto lg:full h-[400px] flex justify-center">
+                        <ResponsiveContainer>
+                            <PieChart width={800} height={400}>
+                                <Pie
+                                    dataKey="value"
+                                    data={data}
+                                    fill="#8884d8"
+                                    label
+                                />
+                                <Legend />
+                            </PieChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
-                <div className="mt-10 w-[80%] mx-auto lg:full h-[400px] flex justify-center">
-                    <ResponsiveContainer>
-                        <PieChart width={800} height={400}>
-                            <Pie
-                                dataKey="value"
-                                data={data}
-                                fill="#8884d8"
-                                label
-                            />
-                            <Legend />
-                        </PieChart>
-                    </ResponsiveContainer>
-                </div>
             </div>
-        </div>
         </div >
     );
 };
