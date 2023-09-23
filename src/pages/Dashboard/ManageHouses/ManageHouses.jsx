@@ -81,10 +81,10 @@ const ManageHouses = () => {
                                     <td>{house.status}</td>
                                     <th>
                                         <div className="flex gap-3">
-                                            <button onClick={() => handleStatus(house._id, 'Approved')} className="btn btn-xs btn-success" disabled={house.status !== 'Pending' ? true : false}>
+                                            <button onClick={() => handleStatus(house._id, 'Approved')} className="btn btn-xs md:btn-sm btn-success capitalize" disabled={house.status !== 'Pending' ? true : false}>
                                                 Approve
                                             </button>
-                                            <button onClick={() => handleStatus(house._id, 'Rejected')} className="btn btn-xs btn-warning" disabled={house.status !== 'Pending' ? true : false}>
+                                            <button onClick={() => handleStatus(house._id, 'Rejected')} className="btn btn-xs md:btn-sm btn-warning capitalize" disabled={house.status !== 'Pending' ? true : false}>
                                                 Reject
                                             </button>
                                         </div>

@@ -86,7 +86,7 @@ const ManageRentedHouses = () => {
                                     <td>{rentedHouse.total}</td>
                                     <th>
                                         <div className="flex gap-3">
-                                            <button onClick={() => handleFreeUpHouse(rentedHouse._id, rentedHouse.houseId)} className="btn btn-xs md:btn-sm bg-red-600 hover:bg-red-700 text-white">
+                                            <button onClick={() => handleFreeUpHouse(rentedHouse._id, rentedHouse.houseId)} className="btn btn-xs md:btn-sm bg-red-600 hover:bg-red-700 text-white capitalize">
                                                 Free Up House
                                             </button>
                                         </div>

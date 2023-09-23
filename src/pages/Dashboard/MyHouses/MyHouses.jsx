@@ -50,7 +50,7 @@ const MyHouses = () => {
 
     return (
         <div className="py-10 min-h-screen">
-            <h3 className="text-3xl font-medium text-center mb-16 uppercase tracking-wider">My Houses</h3>
+            {/* <h3 className="text-3xl font-medium text-center mb-16 uppercase tracking-wider">My Houses</h3> */}
             <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-12">
                 {
                     houses.map((house, index) => <SingleHouse

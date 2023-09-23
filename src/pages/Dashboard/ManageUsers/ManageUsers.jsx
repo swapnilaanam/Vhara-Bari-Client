@@ -19,19 +19,31 @@ const ManageUsers = () => {
     });
 
     const handleRole = (id) => {
-        axiosSecure.patch(`users/${id}`)
-            .then(response => {
-                if (response.data.modifiedCount > 0) {
-                    refetch();
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: `Role is updated to Admin!`,
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                }
-            })
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Make Admin!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.patch(`users/${id}`)
+                    .then(response => {
+                        if (response.data.modifiedCount > 0) {
+                            refetch();
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: `Role is updated to Admin!`,
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
+                    })
+            }
+        })
     };
 
     return (
@@ -75,7 +87,7 @@ const ManageUsers = () => {
                                     <td>{user.role}</td>
                                     <th>
                                         <div className="flex justify-center gap-3">
-                                            <button onClick={() => handleRole(user._id, 'Approved')} className="btn btn-xs btn-success" disabled={user.role === 'Admin' ? true : false}>
+                                            <button onClick={() => handleRole(user._id, 'Approved')} className="btn btn-xs md:btn-sm bg-emerald-600 hover:bg-emerald-700 capitalize text-white" disabled={user.role === 'Admin' ? true : false}>
                                                 Make Admin
                                             </button>
                                         </div>
