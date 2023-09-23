@@ -6,7 +6,7 @@ const AboutUs = () => {
     return (
 
         <section
-            className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center pt-20 pb-28"
+            className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center pt-20 pb-28 px-4 md:px-0"
         >
             <div className="p-8 md:p-12 lg:px-16 lg:py-28" data-aos="fade-right"  data-aos-duration="2500">
                 <div
@@ -23,7 +23,7 @@ const AboutUs = () => {
                     <div className="mt-4 md:mt-8">
                         <Link
                             href="/rentalhouses"
-                            className="inline-block rounded bg-emerald-600 px-12 py-3 text-lg font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                            className="inline-block rounded bg-emerald-600 px-12 py-3 text-sm md:text-lg font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
                         >
                             Start Your Rental Journey
                         </Link>
@@ -34,7 +34,7 @@ const AboutUs = () => {
             <img
                 alt="House"
                 src={aboutImage}
-                className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
+                className="mt-4 md:mt-0 h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
                 data-aos="fade-left" 
                 data-aos-duration="2500"
             />
