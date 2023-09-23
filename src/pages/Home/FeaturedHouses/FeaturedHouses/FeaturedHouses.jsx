@@ -7,7 +7,7 @@ const FeaturedHouses = () => {
     const [featuredHouses, setFeaturedHouse] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/houses')
+        axios.get('https://vhara-bari-server.vercel.app/houses')
             .then(response => {
                 const houses = response.data.filter(house => house.status === 'Approved').slice(0, 3);
                 setFeaturedHouse(houses);

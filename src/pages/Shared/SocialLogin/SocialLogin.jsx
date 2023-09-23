@@ -17,7 +17,7 @@ const SocialLogin = () => {
             .then((result) => {
                 const loggedUser = result.user;
 
-                axios.get(`http://localhost:5000/users/verify/${loggedUser.email}`)
+                axios.get(`https://vhara-bari-server.vercel.app/users/verify/${loggedUser.email}`)
                     .then(res => {
                         const role = res.data.role;
 
@@ -47,7 +47,7 @@ const SocialLogin = () => {
                                 role: roleData
                             };
 
-                            axios.post('http://localhost:5000/users', newUser)
+                            axios.post('https://vhara-bari-server.vercel.app/users', newUser)
                                 .then(res => {
                                     if (res.data.insertedId) {
                                         console.log('user saved to the data base...');

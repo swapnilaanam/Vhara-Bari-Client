@@ -10,7 +10,7 @@ import Testimonials from '../Testimonials/Testimonials/Testimonials';
 
 const Home = () => {
     return (
-        <div>
+        <div className="overflow-hidden">
             <HomeBanner />
             <AboutUs />
             <Services />

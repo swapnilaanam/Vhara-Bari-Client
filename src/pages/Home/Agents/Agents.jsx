@@ -5,7 +5,7 @@ const Agents = () => {
     const [agents, setAgents] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/agents')
+        fetch('https://vhara-bari-server.vercel.app/agents')
             .then(res => res.json())
             .then(data => setAgents(data));
     }, [])

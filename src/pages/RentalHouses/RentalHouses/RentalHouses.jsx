@@ -17,10 +17,10 @@ const RentalHouses = () => {
 
     useEffect(() => {
         if (city) {
-            axios.get(`http://localhost:5000/houses?city=${city}`)
+            axios.get(`https://vhara-bari-server.vercel.app/houses?city=${city}`)
             .then(response => setRentalHouses(response.data.filter(rentalHouse => rentalHouse.status === 'Approved')));
         } else {
-            axios.get(`http://localhost:5000/houses`)
+            axios.get(`https://vhara-bari-server.vercel.app/houses`)
             .then(response => setRentalHouses(response.data.filter(rentalHouse => rentalHouse.status === 'Approved')));
         }
     }, [city]);
@@ -28,14 +28,14 @@ const RentalHouses = () => {
     return (
         <div className="w-full min-h-screen bg-green-50 pt-20 pb-28">
             <h4 className="text-center text-3xl font-medium uppercase tracking-wider">All The Rental Houses</h4>
-            <div className="join flex justify-center mt-10 mb-20">
+            <div className="join flex justify-center mt-10 mb-20 px-2">
                 <div>
                     <div>
-                        <input className="input join-item bg-white text-black w-52 lg:w-80 h-10 border-2 border-gray-300" placeholder="Search By City..." defaultValue={city} ref={searchInputRef} />
+                        <input className="input join-item bg-white text-black w-48 lg:w-80 h-10 border-2 border-gray-300" placeholder="Search By City..." defaultValue={city} ref={searchInputRef} />
                     </div>
                 </div>
                 <div className="indicator">
-                    <button onClick={handleSearch} className="bg-emerald-600 text-white font-medium join-item px-14">Search</button>
+                    <button onClick={handleSearch} className="bg-emerald-600 text-white font-medium join-item px-7 md:px-14">Search</button>
                 </div>
             </div>
             <div className="px-4 max-w-7xl mx-auto flex justify-center gap-20 flex-wrap">

@@ -11,7 +11,7 @@ const ManageHouses = () => {
     const { data: houses = [], refetch } = useQuery({
         queryKey: ['houses', user?.email],
         queryFn: async () => {
-            const response = await axios.get('http://localhost:5000/houses')
+            const response = await axios.get('https://vhara-bari-server.vercel.app/houses')
             return response.data;
         }
     });

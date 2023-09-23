@@ -7,7 +7,7 @@ const SingleRentalHouse = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/houses/${id}`)
+        fetch(`https://vhara-bari-server.vercel.app/houses/${id}`)
             .then(res => res.json())
             .then(data => setHouse(data))
             .catch(error => console.log(error));

@@ -14,7 +14,7 @@ const AdminDashboard = () => {
         queryKey: ['houses'],
         queryFn: async () => {
             try {
-                const response = await axios.get('http://localhost:5000/houses');
+                const response = await axios.get('https://vhara-bari-server.vercel.app/houses');
                 return response.data;
             } catch (error) {
                 console.log(error);

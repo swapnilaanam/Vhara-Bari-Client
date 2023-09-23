@@ -52,7 +52,7 @@ const Register = () => {
                                             }
 
                                             // console.log(newUser);
-                                            axios.post('http://localhost:5000/users', newUser)
+                                            axios.post('https://vhara-bari-server.vercel.app/users', newUser)
                                                 .then(res => {
                                                     if (res.data.insertedId) {
                                                         reset();

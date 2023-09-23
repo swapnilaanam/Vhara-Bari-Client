@@ -6,7 +6,7 @@ const Testimonials = () => {
     const [testimonials, setTestimonials] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/testimonials')
+        axios.get('https://vhara-bari-server.vercel.app/testimonials')
             .then(response => setTestimonials(response.data))
             .catch(error => console.log(error));
     }, [])

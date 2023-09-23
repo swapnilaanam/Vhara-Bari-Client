@@ -12,7 +12,7 @@ const CheckOut = () => {
         queryKey: ['house', id],
         queryFn: async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/houses/${id}`);
+                const response = await axios.get(`https://vhara-bari-server.vercel.app/houses/${id}`);
                 return response.data;
             }
             catch (error) {

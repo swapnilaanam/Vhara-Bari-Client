@@ -21,7 +21,7 @@ const Payment = () => {
         queryKey: ['house', id],
         queryFn: async () => {
             try {
-                const response = await axiosSecure.get(`http://localhost:5000/houses/${id}`);
+                const response = await axiosSecure.get(`https://vhara-bari-server.vercel.app/houses/${id}`);
                 return response.data;
             }
             catch (error) {

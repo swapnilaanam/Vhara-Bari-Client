@@ -11,7 +11,7 @@ const ManageRentedHouses = () => {
     const { data: rentedHouses = [], refetch } = useQuery({
         queryKey: ['rentedHouses', user?.email],
         queryFn: async () => {
-            const response = await axiosSecure.get('http://localhost:5000/rentedhouses')
+            const response = await axiosSecure.get('https://vhara-bari-server.vercel.app/rentedhouses')
             return response.data;
         }
     });
@@ -27,10 +27,10 @@ const ManageRentedHouses = () => {
             confirmButtonText: 'Yes, Free Up Space!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axiosSecure.delete(`http://localhost:5000/rentedhouses/${rentedHouseId}`)
+                axiosSecure.delete(`https://vhara-bari-server.vercel.app/rentedhouses/${rentedHouseId}`)
                     .then((response) => {
                         if (response?.data?.deletedCount > 0) {
-                            axiosSecure.patch(`http://localhost:5000/houses/status/${houseId}`, { status: 'Approved' })
+                            axiosSecure.patch(`https://vhara-bari-server.vercel.app/houses/status/${houseId}`, { status: 'Approved' })
                                 .then((response) => {
                                     if (response?.data?.modifiedCount > 0) {
                                         refetch();

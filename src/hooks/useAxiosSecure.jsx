@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 // creating an axios instance
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://vhara-bari-server.vercel.app'
 });
 
 const useAxiosSecure = () => {
