@@ -17,7 +17,13 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p>Copyright © 2023 - All right reserved by VharaBari Private Limited.</p>
+                    <p>Copyright © 2024 - All right reserved by VharaBari Private Limited.</p>
+                    <div className="flex justify-center items-center">
+                        <p>Designed And Developed By</p>
+                        <Link to='https://swapnilaanam.com/' target='_blank'>
+                            Swapnil Aanam
+                        </Link>
+                    </div>
                 </div>
             </footer>
         </div>

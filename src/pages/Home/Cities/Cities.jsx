@@ -12,7 +12,7 @@ const Cities = () => {
         <div className="py-28 bg-gray-50 px-4 lg:px-0">
             <h2 className="text-3xl font-medium text-center mb-20 uppercase tracking-wider">Our Journey, Through City</h2>
             <div className="max-w-7xl mx-auto grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
-                <div className="rounded-lg bg-gray-100 lg:col-span-2" data-aos="fade-up-right" data-aos-duration="1500">
+                <div className="rounded-lg bg-gray-100 lg:col-span-2">
                     <Link to="/rentalhouses?city=Sylhet" className="group relative block shadow-2xl">
                         <div className="relative h-[350px] sm:h-[450px]">
                             <img
@@ -37,7 +37,7 @@ const Cities = () => {
                         </div>
                     </Link>
                 </div>
-                <div className="rounded-lg bg-gray-100" data-aos="fade-up-right" data-aos-duration="1500">
+                <div className="rounded-lg bg-gray-100">
                     <Link to="/rentalhouses?city=Dhaka" className="group relative block shadow-xl">
                         <div className="relative h-[350px] sm:h-[450px]">
                             <img
@@ -62,7 +62,7 @@ const Cities = () => {
                         </div>
                     </Link>
                 </div>
-                <div className="rounded-lg bg-gray-100" data-aos="fade-up-right" data-aos-duration="1500">
+                <div className="rounded-lg bg-gray-100">
                     <Link to="/rentalhouses?city=Chittagong" className="group relative block shadow-xl">
                         <div className="relative h-[350px] sm:h-[450px]">
                             <img

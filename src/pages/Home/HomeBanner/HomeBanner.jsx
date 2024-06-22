@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import homeBannerImage from '../../../assets/images/home-banner-comp.jpg';
+import homeBannerImage from '../../../assets/images/home-banner-copy.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const HomeBanner = () => {

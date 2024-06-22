@@ -15,7 +15,7 @@
     "@tanstack/react-query": "^4.29.25",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
-    "firebase": "^9.22.2",
+    "firebase": "^10.12.2",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.1",
