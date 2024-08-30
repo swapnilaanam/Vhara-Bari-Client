@@ -14,3 +14,12 @@ Vhara Bari is a house/property rental website that allows house owners to upload
 **Technologies Used:** React JS, Node JS, Express JS, MongoDB, Firebase Authentication, JWT, Stripe Payment API, Tailwind CSS, AOS, LottieFiles Animation,  React Router, React Fast Marque, Vite, Vercel.
 
 ### [Live Website Link (Click To Visit)](https://vhara-bari-client.vercel.app/)
+
+
+## License
+
+This project is licensed under a [Custom License](LICENSE.md). 
+
+© 2024 MD. Ashraf-Ul-Aanam Swapnil. All rights reserved.
+
+Please see the [LICENSE](LICENSE.md) file for full details.
